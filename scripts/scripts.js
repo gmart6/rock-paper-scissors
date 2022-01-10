@@ -4,6 +4,7 @@ let computerSelection;
 let playerWins = 0;
 let computerWins = 0;
 
+// Run five rounds of the game, share the overall result
 function game() {
     playerWins = 0;
     computerWins = 0;
@@ -23,6 +24,7 @@ function game() {
     }
 }
 
+// Determine the player's choice of move
 function playerPlay() {
     while (true) {
         playerSelection = prompt('Will you play rock, paper, or scissors?');
@@ -35,6 +37,7 @@ function playerPlay() {
     }
 }
 
+// Determine the computer's choice of move
 function computerPlay() {
     let compSel = Math.floor((Math.random() * 3)) + 1;
     switch (compSel) {
@@ -49,6 +52,7 @@ function computerPlay() {
     }
 }
 
+// Play a round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
     console.log(computerSelection);
     if (playerSelection === 'rock') {
